@@ -1,0 +1,250 @@
+.btech_navbar {
+    width: 100%;
+    height: 104px;
+    top: 0;
+    position: absolute;
+}
+.btech_navbar_top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 112px;
+    background: #0B1124;
+}
+.navbar_top_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar_left_container{
+    width: 377px;
+}
+.navbar_right_container {
+    width: 293px;
+}
+.navbar_top_container div {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar_top_container span a,
+.navbar_top_container span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FEFEFF;
+}
+.navbar_top_container span:hover a,
+.navbar_top_container span:hover {
+    color: #D2D1D7;
+}
+.select {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 115px;
+    border: none;
+    outline: none;
+    background: #FEFEFF;
+    padding: 12px;
+    border-radius: 6px;
+}
+.arrow {
+    position: absolute;
+    color: rgb(254, 254, 255);
+    transform: rotate(-90deg);
+    top: -16px;
+    left: 35%;
+}
+.select ul {list-style: none}
+.select li {
+    width: max-content;
+    line-height: 22px;
+    color: #0B1124;
+    margin-bottom: 4px;
+}
+.select li:hover {
+    color: #2E3C85;
+    text-decoration: underline;
+}
+.btech_navbar_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100% ;
+    padding: 16px 112px 0;
+    background: #FEFEFF;
+}
+.navbar_bottom_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.catalog_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 278px;
+}
+.navCatalog {
+    background: #F9FC62;
+    color: #0B1124;
+}
+.navCatalog svg {
+    margin-right: 13px;
+}
+.modal button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.modal {
+    position: absolute;
+    width: calc(100% - 224px);
+    height: 760px;
+    margin-top: 90px;
+    outline: none;
+    border: none;
+    background: #FEFEFF;
+    left: 112px;
+    z-index: 10;
+}
+.modalWindow:nth-child(4) {
+    background: rgba(0, 0, 0, 0);
+}
+.search_navbar {
+    position: relative;
+    width: 550px;
+    height: 100%;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #FEFEFF;
+    width: 100%;
+    border: 1px solid #D2D1D7;
+    padding-left: 16px;
+    border-radius: 12px;
+}
+.search input {
+    width: 100%;
+    height: 44px;
+    padding-right: 16px;
+    border: none;
+    outline: none;
+}
+.search button {
+    height: 47px;
+}
+.filter {
+    position: absolute;
+    max-height: 237px;
+    overflow-y: auto;
+    width: 100%;
+    border-radius: 7px;
+    background: #FEFEFF;
+    box-shadow: 0 3px 7px;
+    z-index: 99;
+}
+.filter li {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px;
+}
+.filter::backdrop {
+    background: #000;
+}
+.links_navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 324px;
+    height: 24px;
+}
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0B1124;
+}
+.profile {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 800px;
+    background: #FEFEFF;
+    padding: 20px;
+}
+.profile_container {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 1184px) {
+    .navCatalog span {
+        display: none;
+    }
+    .navCatalog svg {
+        margin-right: 0;
+    }
+}
+@media (max-width: 1130px) {
+    .btech_navbar_top {
+        padding: 4px 12px;
+    }
+    .navbar_left_container {
+        width: max-content;
+    }
+    .navbar_left_container span:not(:first-child),
+    .navbar_right_container span:first-child,
+    .catalog_navbar span>img {
+        display: none;
+    }
+    .select {
+        top: 35px;
+        left: 15px;
+    }
+    .navbar_right_container {
+        width: max-content;
+    }
+    .btech_navbar_bottom {
+        padding: 12px 12px 0 !important;
+    }
+    .catalog_navbar {
+        width: max-content;
+        justify-content: flex-start;
+    }
+    .btech_navbar_bottom {;
+        padding: 16px 70px 0 70px;
+    }
+}
+@media (max-width: 865px) {
+    .catalog_navbar span:first-child {
+        display: none;
+    }
+}
+@media (max-width: 700px) {
+    .link span {
+        display: none;
+    }
+    .links_navbar {
+        width: 120px;
+    }
+}
+@media (max-width: 470px) {
+    .search button {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+    }
+    .links_navbar {
+        width: 85px;
+    }
+    .modal {
+        width: 330px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
