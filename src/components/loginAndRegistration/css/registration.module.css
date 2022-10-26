@@ -1,0 +1,128 @@
+.blockRegistry {
+    padding: 32px 20px;
+    background: #F7F7FC;
+    border-radius: 24px;
+}
+.blockReg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 392px;
+}
+.blockReg h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    font-family: sans-serif;
+    margin-bottom: 32px;
+}
+.blockReg p {
+    text-align: center;
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #666;
+    margin-bottom: 40px;
+}
+.formPage {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.codePage {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.codePage input::-webkit-outer-spin-button,
+.codePage input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.password {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+}
+.password label {
+    cursor:pointer;
+    position: absolute;
+    right: 30px;
+    moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    color:#888;
+    font-size:20px;
+    z-index:1;
+}
+.regBtn {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.015em;
+    color: #0B1124;
+    padding: 12px 24px;
+    background: #F9FC62;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    outline: none;
+}
+.regBtn:hover {
+    background: #F8F041;
+}
+.regBtn:disabled {
+    opacity: 0.5;
+}
+
+.regLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 195px;
+    height: 86px;
+}
+.regLinks .or {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.regLinks .or i {
+    width: 70px;
+    height: 1px;
+    background-color: #605D74;
+}
+.regLinks .or span {
+    color: #605D74;
+    font-family: sans-serif;
+    margin: 0 12px;
+}
+.regLinks .socLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 108px;
+    height: 46px;
+}
+.regLinks .socLinks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #D2D1D7;
+    border-radius: 8px;
+    width: 46px;
+    height: 46px;
+}
+@media (max-width: 435px) {
+    .blockReg {
+        width: 340px;
+    }
+}
+@media (max-width: 380px) {
+    .blockReg {
+        width: 320px;
+    }
+}
+

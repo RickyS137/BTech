@@ -1,0 +1,11 @@
+.reg_wrapper {
+    width: 100%;
+    height: 800px;
+}
+.regBlock {
+    position: absolute;
+    object-position: center;
+    top: 150px;
+    left:50%;
+    transform:translateX(-50%);
+}

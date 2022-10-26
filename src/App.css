@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 16px 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+}
+.btn {
+    height: 48px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.015em;
+    color: #0B1124;
+    padding: 12px 24px;
+    background: #F9FC62;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+}
+.btn:hover {
+    background: #F8F041;
+}
