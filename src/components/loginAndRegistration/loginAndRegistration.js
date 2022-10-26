@@ -208,7 +208,7 @@ const LoginAndRegister = () => {
                         обработку моих персональных данных, в соответствии с
                         Государственным законом от 27.07.2006 года №38 «О
                         персональных данных» <input style={{position:"relative", top:"1px"}} type="checkbox" disabled={agree} checked={cheked} onClick={e=> {
-                            setCheked(true);
+                            setCheked(!checked);
                             setValid(!e.target.checked);
                         }}/>  Я принимаю</p>
                 </div>
@@ -217,7 +217,7 @@ const LoginAndRegister = () => {
                 <div className={classes.regLinks}>
                     <div className={classes.or}><i></i><span>Или</span><i></i></div>
                     <div className={classes.socLinks}>
-                        <a href="btech/src/components1/loginAndRegisterPage/registration">
+                        <a href="https://myaccount.google.com/">
                             <FcGoogle fontSize="25px"/>
                         </a>
                         <a href="https://vk.com/login">
