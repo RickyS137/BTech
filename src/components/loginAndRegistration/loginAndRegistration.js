@@ -148,7 +148,7 @@ const LoginAndRegister = () => {
     useEffect( () => {
         if (emailDirty || passwordDirty){
             setValid(true);
-        } else if (!emailDirty && !passwordDirty && !cheked){
+        } else if (!emailDirty && !passwordDirty && !checked){
             setValid(false);
         }
         if (code === newCode[0] + newCode[1] + newCode[2] + newCode[3] && code.length === 4){
