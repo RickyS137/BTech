@@ -23,7 +23,7 @@ const LoginAndRegister = () => {
     // --------- валидация ----------- //
     const [agree, setAgree] = useState(false);
     const [valid, setValid] = useState(false);
-    const [cheked, setCheked] = useState(false);
+    const [checked, setChecked] = useState(false);
     const [email, setEmail] = useState("");
     const [emailDirty, setEmailDirty] = useState(false);
     const [emailError, setEmailError] = useState("");
