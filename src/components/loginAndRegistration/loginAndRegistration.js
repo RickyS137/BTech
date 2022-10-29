@@ -208,7 +208,7 @@ const LoginAndRegister = () => {
                         обработку моих персональных данных, в соответствии с
                         Государственным законом от 27.07.2006 года №38 «О
                         персональных данных» <input style={{position:"relative", top:"1px"}} type="checkbox" disabled={agree} checked={cheked} onClick={e=> {
-                            setCheked(!checked);
+                            setChecked(!checked);
                             setValid(!e.target.checked);
                         }}/>  Я принимаю</p>
                 </div>
