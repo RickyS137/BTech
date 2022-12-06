@@ -1,14 +1,39 @@
-.box{
+.box {
   width: 215px;
   height: 298px;
   padding: 14px 10px 4px;
   border-radius: 12px;
   border: 1px solid transparent;
 }
-.box img{
+.box img {
   height: 154px;
   width: 160px;
 }
-.box:hover{
-  border: 1px solid #D2D1D7;
+.box a{
+  text-decoration: none;
+}
+.box:hover {
+  border: 1px solid #d2d1d7;
+}
+.box p {
+  margin-top: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #0B1124;
+}
+.box h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+}
+.price {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price svg{
+  width: 19px;
+  height: 19px;
 }
