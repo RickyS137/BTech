@@ -1,0 +1,90 @@
+.product {
+    margin-top: 122px;
+    min-height: 500px;
+    margin-bottom: 72px;
+}
+.product__inner {
+    display: flex;
+    margin-bottom: 64px;
+}
+.product h1,
+.info h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 23px;
+}
+.left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 495px;
+    height: 480px;
+    background: #FEFEFF;
+    border-radius: 32px;
+}
+.left img {
+    width: 379px;
+    height: 484px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+}
+.right>span {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.015em;
+    margin-bottom: 32px;
+}
+.right>span svg {
+    width: 13px;
+}
+.right h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 16px;
+}
+.character h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.char {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 600px;
+    margin-bottom: 15px;
+}
+.char span {
+    display: flex;
+    justify-content: space-between;
+}
+.char span label {
+    font-size: 16px;
+    line-height: 22px;
+    color: #605D74;
+}
+.info div {
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.info div p {
+    width: 804px;
+    height: 236px;
+    transition: .3s;
+}
+.info span {
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: #2E3C85;
+}

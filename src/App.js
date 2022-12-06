@@ -7,6 +7,7 @@ import Footer from "./components/footer/footer";
 import MainPage from "./pages/mainPage/MainPage";
 import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
 import Shipping from './pages/shippingAndPaymentPage/ShippingAndPaymentPage'
+import ProductPage from "./pages/productPage/ProductPage";
 import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
     <div className="app">
         <Header/>
             <Routes>
-                <Route path="/login" element={<RegisterComponent/>}/>
                 <Route path="/" element={<MainPage/>}/>
+                <Route path="/:name" element={<ProductPage/>}/>
                 <Route path="/bestsellers" element={<BestsellersPage/>}/>
                 <Route path="/shipping" element={<Shipping/>}/>
+                <Route path="/login" element={<RegisterComponent/>}/>
+                <Route path="/:category/:name" element={<ProductPage/>}/>
                 <Route path="/favourite" element={<FavoritesPage/>}/>
             </Routes>
         <Footer/>
