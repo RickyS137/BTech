@@ -11,7 +11,7 @@ import {ReactComponent as Locate} from "../../media/locate.svg";
 import {newLocate} from "../../redux/slice/citySlice";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import {Search, FavoriteBorderOutlined, ShoppingBagOutlined, PlayArrow} from "@mui/icons-material";
-import {Box, Modal} from "@mui/material";
+import {Badge, Box, Modal} from "@mui/material";
 
 import MyModal from "./modal";
 import axios from "axios";
@@ -116,8 +116,8 @@ const Header = () => {
                         <Modal open={profile} onClose={()=>setProfile(false)}><Box className={classes.profile}>
                             <div className={classes.profile_container}><button onClick={exitUser} className="btn">выйти</button></div>
                         </Box></Modal>
-                        <Link className={classes.link} to="/"><FavoriteBorderOutlined style={{marginRight:"8px"}}/><span>Избранное</span></Link>
-                        <Link className={classes.link} to="/"><ShoppingBagOutlined style={{marginRight:"8px"}}/><span>Корзина</span></Link>
+                        <Link className={classes.link} to="/favourite"><FavoriteBorderOutlined style={{marginRight:"8px"}}/><span>Избранное</span></Link>
+                        <Link className={classes.link} to="/"><Badge badgeContent={1} color="error" ><ShoppingBagOutlined sx={{color:'#0B1124'}}/></Badge><span style={{marginLeft: '8px'}}>Корзина</span></Link>
                     </div>
                 </div>
             </div>

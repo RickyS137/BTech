@@ -1,0 +1,61 @@
+.box {
+  margin-top: 32px;
+  display: flex;
+  column-gap: 90px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+}
+.box img {
+  width: 200px;
+  height: 227px;
+}
+.box svg {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+.centralBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.centralBox h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+}
+.centralBox span {
+  color: #a4a2af;
+  margin-right: 7px;
+}
+.centralBox p {
+  width: 318px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+}
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+}
+.rightBox h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #0B1124;
+}
+.rightBox span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #605d74;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.rightBox p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
