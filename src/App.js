@@ -14,11 +14,12 @@ function App() {
     <div className="app">
         <Header/>
             <Routes>
-                <Route path="/login" element={<RegisterComponent/>}/>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/:name" element={<ProductPage/>}/>
                 <Route path="/bestsellers" element={<BestsellersPage/>}/>
                 <Route path="/shipping" element={<Shipping/>}/>
+                <Route path="/login" element={<RegisterComponent/>}/>
+                <Route path="/:category/:name" element={<ProductPage/>}/>
             </Routes>
         <Footer/>
     </div>
