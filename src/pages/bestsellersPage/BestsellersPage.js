@@ -7,7 +7,7 @@ import {
   ProductsSelect,
 } from '../../redux/slice/productsSlice';
 import '../../App.css';
-import { Pagination } from '@mui/material';
+import {CircularProgress, Pagination} from '@mui/material';
 import style from './css/bestsellerspage.module.css';
 
 const BestsellersPage = () => {
@@ -18,7 +18,7 @@ const BestsellersPage = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getProducts(20));
   }, []);
 
   return (
@@ -27,7 +27,7 @@ const BestsellersPage = () => {
         <h2>Хиты продаж</h2>
         <ul className={style.products}>
           {load
-            ? 'loading...'
+            ? <CircularProgress/>
             : products.slice(page * 20 - 20, page * 20).map((item, i) => (
                 <li key={i}>
                   <BestsellersCard item={item} />
@@ -36,12 +36,14 @@ const BestsellersPage = () => {
         </ul>
         {!load && (
           <div className={style.pagination}>
-            <Pagination
-              size='large'
-              color="primary"
-              count={Math.ceil(products.length / 20)}
-              onChange={(_, e) => setPage(e)}
-            />
+            {
+              products.length > 20 &&
+              <Pagination
+                size='large'
+                color="primary"
+                count={Math.ceil(products.length / 20)}
+                onChange={(_, e) => setPage(e)}
+            />}
           </div>
         )}
       </div>

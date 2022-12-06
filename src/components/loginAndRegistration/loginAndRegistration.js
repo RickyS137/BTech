@@ -207,7 +207,7 @@ const LoginAndRegister = () => {
                     <p className={codeForm[0]}>Нажимая кнопку «Создать аккаунт», я даю свое согласие на
                         обработку моих персональных данных, в соответствии с
                         Государственным законом от 27.07.2006 года №38 «О
-                        персональных данных» <input style={{position:"relative", top:"1px"}} type="checkbox" disabled={agree} checked={checked} onClick={e=> {
+                        персональных данных» <input style={{position:"relative", top:"1px"}} type="checkbox" disabled={agree} checked={checked} onChange={e=> {
                             setChecked(!checked);
                             setValid(!e.target.checked);
                         }}/>  Я принимаю</p>

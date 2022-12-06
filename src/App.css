@@ -8,6 +8,7 @@ body {
     width: 100%;
 }
 .btn {
+    width: max-content;
     height: 48px;
     cursor: pointer;
     font-weight: 600;
