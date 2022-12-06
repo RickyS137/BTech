@@ -5,14 +5,16 @@ import RegisterComponent from "./pages/loginAndRegistrationPage/LoginAndRegistra
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import MainPage from "./pages/mainPage/MainPage";
+import ProductPage from "./pages/productPage/ProductPage";
 
 function App() {
     return (
     <div className="app">
         <Header/>
             <Routes>
-                <Route path="/login" element={<RegisterComponent/>}/>
                 <Route path="/" element={<MainPage/>}/>
+                <Route path="/login" element={<RegisterComponent/>}/>
+                <Route path="/:category/:name" element={<ProductPage/>}/>
             </Routes>
         <Footer/>
     </div>
