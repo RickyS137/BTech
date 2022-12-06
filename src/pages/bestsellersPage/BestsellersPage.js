@@ -4,6 +4,7 @@ import BestsellersCard from '../../components/bestsellers/bestsellersCard/Bestse
 import { getProducts, ProductsSelect } from '../../redux/slice/productsSlice';
 import '../../App.css';
 import { Pagination } from '@mui/material';
+import style from './css/bestsellerspage.module.css'
 
 const BestsellersPage = () => {
   const products = useSelector(ProductsSelect);
@@ -15,17 +16,20 @@ const BestsellersPage = () => {
     dispatch(getProducts());
   }, []);
 
-  console.log(products);
   return (
-    <>
-      <h3>Хиты продаж</h3>
+    <div className={style.box}>
       <div className="container">
-        <Pagination/>
-        {products.slice(0, 20).map((item, i) => (
-          <BestsellersCard item={item} />
-        ))}
+      <h2>Хиты продаж</h2>
+        <ul className={style.products}>
+          {products.slice((page * 20) - 20, (page * 20)).map((item, i) => (
+            <li><BestsellersCard item={item}/></li>
+            ))}
+        </ul>
+            <Pagination count={Math.ceil(products.length / 20)} onChange={(_,e) => {
+              setPage(e)
+            }}/>
       </div>
-    </>
+    </div>
   );
 };
 

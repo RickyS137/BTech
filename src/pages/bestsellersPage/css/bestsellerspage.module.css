@@ -1,0 +1,18 @@
+.box {
+  margin-top: 122px;
+  width: 100%;
+}
+.box h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 135%;
+  color: #0B1124;
+}
+.products{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 54px;
+  margin-top: 20px;
+}
