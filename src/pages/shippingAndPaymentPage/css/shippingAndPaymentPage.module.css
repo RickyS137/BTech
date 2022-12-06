@@ -1,0 +1,134 @@
+.shipping {
+    margin-top: 122px;
+}
+.blockInput {
+    display: flex;
+    justify-content: space-between;
+}
+.blockInputs {
+    display: flex;
+}
+.blockP {
+    padding: 0 50px 0 5px;
+}
+.blockH2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.blockH3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.formInput {
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+}
+.formInput div {
+    display: flex;
+    flex-direction: column;
+
+}
+.forma {
+    margin-top: 40px;
+}
+.formaInput {
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #F7F7FC;
+    padding: 9px 0 9px 12px;
+}
+.formInput div label {
+    margin-bottom: 17px;
+}
+.formaDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.formaDiv label {
+    margin-bottom: 17px;
+}
+.formaInputs {
+    width: 556px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #F7F7FC;
+    padding: 9px 0 9px 12px;
+}
+.block2 {
+    width: 600px;
+    height: 352px;
+    border: 1px solid red;
+    border-radius: 28px;
+}
+.oplata {
+    width: 150px;
+    height: 160px;
+    border: none;
+    background-color: #F7F7FC;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.oplata:hover {
+    cursor: pointer;
+}
+.oplata h4 {
+    margin-top: 43px;
+}
+.block3 {
+    margin-top: 40px;
+}
+.block3Display {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 25px;
+}
+.oplataImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block3Btn {
+    width: 136px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background-color: #F9FC62;
+    margin-top: 48px;
+}
+.block3Btn a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+.block3Btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 140px;
+}
+.activeOplata {
+    width: 150px;
+    height: 160px;
+    border: 1px solid #62A9FC;
+    background-color: #F7F7FC;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -6,6 +6,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import MainPage from "./pages/mainPage/MainPage";
 import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
+import Shipping from './pages/shippingAndPaymentPage/ShippingAndPaymentPage'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/login" element={<RegisterComponent/>}/>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/bestsellers" element={<BestsellersPage/>}/>
+                <Route path="/shipping" element={<Shipping/>}/>
             </Routes>
         <Footer/>
     </div>
