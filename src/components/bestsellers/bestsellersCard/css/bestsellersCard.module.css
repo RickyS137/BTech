@@ -1,0 +1,9 @@
+.box{
+  width: 215px;
+  height: 298px;
+  padding: 14px 10px 4px;
+}
+.box img{
+  height: 154px;
+  width: 160px;
+}
