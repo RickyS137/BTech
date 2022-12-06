@@ -8,6 +8,7 @@ import MainPage from "./pages/mainPage/MainPage";
 import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
 import Shipping from './pages/shippingAndPaymentPage/ShippingAndPaymentPage'
 import ProductPage from "./pages/productPage/ProductPage";
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/shipping" element={<Shipping/>}/>
                 <Route path="/login" element={<RegisterComponent/>}/>
                 <Route path="/:category/:name" element={<ProductPage/>}/>
+                <Route path="/favourite" element={<FavoritesPage/>}/>
             </Routes>
         <Footer/>
     </div>
