@@ -50,5 +50,8 @@ const ProductPage = () => {
                 </div>
                 <span onClick={()=>setInfo({height: 500})}>{info.height <= 236 && "Читать полностью"}</span>
             </div>
+           </div>
+          );
+          };
 
 export default ProductPage;
