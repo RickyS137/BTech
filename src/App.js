@@ -7,6 +7,7 @@ import Footer from "./components/footer/footer";
 import MainPage from "./pages/mainPage/MainPage";
 import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
 import Shipping from './pages/shippingAndPaymentPage/ShippingAndPaymentPage'
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/bestsellers" element={<BestsellersPage/>}/>
                 <Route path="/shipping" element={<Shipping/>}/>
+                <Route path="/favourite" element={<FavoritesPage/>}/>
             </Routes>
         <Footer/>
     </div>

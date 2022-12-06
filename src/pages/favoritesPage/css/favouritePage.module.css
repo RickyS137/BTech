@@ -1,0 +1,37 @@
+.box {
+  margin-top: 122px;
+}
+.box h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 135%;
+}
+.boxInner{
+  display: flex;
+  justify-content: space-between;
+}
+.box ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex-direction: column;
+}
+.box h3{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+}
+.leftBox{
+  margin-top: 20px;
+  display: flex;
+  row-gap: 40px;
+  flex-direction: column;
+}
+.leftBox svg{
+  cursor: pointer;
+}
+.leftBox h3{
+  cursor: pointer;
+}
