@@ -29,7 +29,6 @@
 .formInput div {
     display: flex;
     flex-direction: column;
-
 }
 .forma {
     margin-top: 40px;
@@ -40,7 +39,7 @@
     border-radius: 8px;
     outline: none;
     border: none;
-    background-color: #F7F7FC;
+    background-color: #f7f7fc;
     padding: 9px 0 9px 12px;
 }
 .formInput div label {
@@ -60,7 +59,7 @@
     border-radius: 8px;
     outline: none;
     border: none;
-    background-color: #F7F7FC;
+    background-color: #f7f7fc;
     padding: 9px 0 9px 12px;
 }
 .block2 {
@@ -73,7 +72,7 @@
     width: 150px;
     height: 160px;
     border: none;
-    background-color: #F7F7FC;
+    background-color: #f7f7fc;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -107,7 +106,7 @@
     height: 48px;
     border-radius: 12px;
     border: none;
-    background-color: #F9FC62;
+    background-color: #f9fc62;
     margin-top: 48px;
 }
 .block3Btn a {
@@ -124,8 +123,8 @@
 .activeOplata {
     width: 150px;
     height: 160px;
-    border: 1px solid #62A9FC;
-    background-color: #F7F7FC;
+    border: 1px solid #62a9fc;
+    background-color: #f7f7fc;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
