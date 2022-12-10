@@ -1,18 +1,22 @@
 import { KeyboardArrowDown } from '@mui/icons-material';
-import React from 'react';
+import React, { useState } from 'react';
 import style from './css/favouritePage.module.css'
 import '../../App.css'
-import { getProducts, ProductsSelect } from '../../redux/slice/productsSlice';
+import { getProducts, LoadSelect, ProductsSelect } from '../../redux/slice/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductContainer from '../../components/productContainer/productContainer';
 import { useEffect } from 'react';
+import { CircularProgress, Pagination } from '@mui/material';
 
 
 const FavoritesPage = () => {
   const products = useSelector(ProductsSelect)
   const dispatch = useDispatch()
+  const load = useSelector(LoadSelect)
+  
+  const [page, setPage] = useState(1)
 
-
+  
   useEffect(() => {
     dispatch(getProducts())
   },[])
@@ -28,10 +32,22 @@ const FavoritesPage = () => {
             <h3>Цена <KeyboardArrowDown/></h3>
             <h3>Год выпуска <KeyboardArrowDown/></h3>
           </div>
-          <ul>
-          {products.slice(0,5).map((item, i) => <li key={i}><ProductContainer products={item}/></li>)}
+          <ul className={style.list}>
+            {
+              load
+              ? <CircularProgress/>
+              : products.slice(page * 5 - 5, page * 5).map((item, i) => <li key={i}><ProductContainer products={item}/></li>)
+            }
           </ul>
         </div>
+        <div className={style.pagination}>
+            <Pagination
+            size='large'
+            color="primary"
+            count={Math.ceil(products.length / 5)}
+            onChange={(_, e) => setPage(e)}
+            />
+          </div>
       </div>
     </div>
   );
