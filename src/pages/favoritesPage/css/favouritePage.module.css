@@ -11,9 +11,11 @@
   justify-content: space-between;
 }
 .box ul{
+  list-style: none;
+}
+.box .list{
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   flex-direction: column;
 }
 .box h3{
@@ -34,4 +36,10 @@
 }
 .leftBox h3{
   cursor: pointer;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
 }
