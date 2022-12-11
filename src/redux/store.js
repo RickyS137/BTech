@@ -4,6 +4,7 @@ import code from "../redux/slice/codeSlice";
 import citySlice from "./slice/citySlice";
 import ProductsSlice from "./slice/productsSlice";
 import ProductSlice from "./slice/productSlice";
+import creditSlice from "./slice/creditSlice";
 
 export const store = configureStore({
     reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
         city: citySlice,
         products: ProductsSlice,
         product: ProductSlice,
+        credit: creditSlice,
     }
 });

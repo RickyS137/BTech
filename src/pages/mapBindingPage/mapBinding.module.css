@@ -1,0 +1,204 @@
+.mapBindingBlock {
+    margin: 130px 0 60px 0;
+}
+.mapBinding {
+    margin: 0 auto;
+    display: flex;
+    width: 820px;
+    height: 400px;
+    position: relative;
+}
+.bindingH2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.mapCard {
+    width: 600px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(102.3deg, #2e3c85 31.24%, #3596cc 88.72%);
+    box-shadow: 16px 15px 28px rgba(56, 44, 86, 0.4);
+    border-radius: 16px;
+    z-index: 1;
+}
+.mapCard img {
+    margin-top: 35px;
+    margin-left: 44px;
+    margin-bottom: 35px;
+}
+.mapCard2 {
+    width: 600px;
+    height: 320px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #2e3c85;
+    border-radius: 16px;
+}
+.bindingForm {
+    display: flex;
+    width: 500px;
+    height: 72px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 108px 0 34px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+.bindingForm input {
+    width: 85px;
+    height: 38px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 6px;
+}
+.bindingForm1 {
+    margin-left: 50px;
+    display: flex;
+    margin-top: 30px;
+    width: 220px;
+    height: 62px;
+    column-gap: 40px;
+    justify-content: space-between;
+    border-radius: 12px;
+    align-items: center;
+}
+.bindingForm1 p {
+    font-size: 28px;
+    color: white;
+}
+.bindingForm1 input {
+    width: 103px;
+    height: 72px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 6px;
+    border-radius: 12px;
+    padding-left: 34px;
+}
+.bindingForm1 input::-webkit-outer-spin-button,
+.bindingForm input::-webkit-outer-spin-button,
+.bindingForm1 input::-webkit-inner-spin-button,
+.bindingForm input::-webkit-inner-spin-button,
+.card2Input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.bindingForm1 input::placeholder,
+.bindingForm input::placeholder,
+.card2Input input::placeholder {
+    color: black;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 6px;
+    line-height: 0%;
+    transform: translateY(7px);
+}
+.mapCard2 div {
+    width: 100%;
+    height: 72px;
+    background-color: black;
+    margin-top: 96px;
+}
+.card2Input {
+    width: 111px;
+    height: 72px;
+    border-radius: 12px;
+}
+.card2Input input {
+    position: absolute;
+    bottom: 30px;
+    right: 72px;
+    width: 121px;
+    height: 72px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 6px;
+    border-radius: 12px;
+    padding-left: 34px;
+}
+#but {
+    margin-top: 60px;
+}
+.butDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.modal1 {
+    width: 320px;
+    height: 380px;
+    border-radius: 24px;
+    outline: none;
+    position: relative;
+    top: 50%;
+    border: none;
+    background-color: #8EDE4D;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.modal1 p,
+.modal2 p {
+    text-align: center;
+    width: 208px;
+}
+.modal2 {
+    width: 320px;
+    height: 380px;
+    border-radius: 24px;
+    outline: none;
+    position: relative;
+    top: 50%;
+    border: none;
+    background-color: #FF9191;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.modal1 img {
+    margin-top: 20px;
+}
+.modal2 img {
+    margin-top: 20px;
+}
+.modal1 h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: -35px;
+}
+.modal1 p {
+    font-size: 16px;
+    font-weight: 400;
+}
+.modal2 h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: -35px;
+}
+.modal2 p {
+    font-size: 16px;
+    font-weight: 400;
+}
+.modalImgClose {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    cursor: pointer;
+}

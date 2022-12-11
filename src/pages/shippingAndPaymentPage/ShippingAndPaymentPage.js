@@ -7,19 +7,23 @@ import nal2 from "../../media/Group.svg";
 import nal3 from "../../media/mastercard-2 1.svg";
 import nal4 from "../../media/logo-Elsom-RGB-72 1.svg";
 import nal5 from "../../media/logo.c9e36ab1 1.svg";
-// import { Link } from 'react-router-dom';
-// import { Breadcrumbs } from "@mui/material"
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import ups from "../../media/983046 1.svg";
+import { Modal } from "@mui/material";
+import smile from "../../media/2341821 1.svg";
+import close from "../../media/Cross.svg";
+import { useState } from "react";
+import classes1 from "../mapBindingPage/mapBinding.module.css";
 
 const Shipping = () => {
+    const binded = JSON.parse(localStorage.getItem("credit"));
+    const [modal, setModal] = useState(false);
+    const credit = useSelector((state) => state.credit.credit);
+
     return (
         <div className={classes.shipping}>
             <div className='container'>
-                {/* <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" to="/">Главная</Link>
-                <Link underline="hover" color="inherit" to="/shipping">Оплата</Link>
-                <Link underline="hover" color="inherit" to="/login">Регистрация</Link>
-                <Link underline="hover" color="inherit" to="/bestsellers">Хиты продаж</Link>
-            </Breadcrumbs> */}
                 <div className={classes.blockInput}>
                     <div>
                         <h2 className={classes.blockH2}>Доставка и оплата</h2>
@@ -119,9 +123,51 @@ const Shipping = () => {
                         />
                     </div>
                     <div className={classes.block3Btns}>
-                        <button className={classes.block3Btn} disabled={true}>
-                            <a href='#'>Оплатить</a>
+                        <button
+                            className={classes.block3Btn}
+                            onClick={() => setModal(true)}
+                        >
+                            <Link
+                                to={
+                                    credit !== "Наличными" &&
+                                    !binded &&
+                                    "/binding"
+                                }
+                            >
+                                {credit === "Наличными"
+                                    ? "Заказать"
+                                    : "Оплатить"}
+                            </Link>
                         </button>
+                        <Modal
+                            open={modal}
+                            onClose={() => {
+                                setModal(false);
+                            }}
+                        >
+                            <div className={classes1.modal1}>
+                                <img
+                                    src={close}
+                                    alt=''
+                                    className={classes1.modalImgClose}
+                                    onClick={() => {
+                                        setModal(false);
+                                    }}
+                                />
+                                <img src={smile} alt='' />
+                                <h2>Отлично!</h2>
+                                <p>
+                                    {
+                                        credit === "Наличными" 
+                                            ? "Ваш заказ принят. Ожидайте курьера"
+                                            : "Оплата прошла успешно!"
+                                    }
+                                </p>
+                                <Link to={"/"}>
+                                    <button className='btn'>Продолжить</button>
+                                </Link>
+                            </div>
+                        </Modal>
                     </div>
                 </div>
             </div>

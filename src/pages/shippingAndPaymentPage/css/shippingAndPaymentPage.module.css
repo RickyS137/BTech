@@ -65,7 +65,8 @@
 .block2 {
     width: 600px;
     height: 352px;
-    border: 1px solid red;
+    border: none;
+    background-color: #F7F7FC;
     border-radius: 28px;
 }
 .oplata {
@@ -84,7 +85,7 @@
     cursor: pointer;
 }
 .oplata h4 {
-    margin-top: 43px;
+    user-select: none;
 }
 .block3 {
     margin-top: 40px;
@@ -100,6 +101,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.oplataImg img {
+    user-select: none;
 }
 .block3Btn {
     width: 136px;

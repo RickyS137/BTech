@@ -9,19 +9,21 @@ import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
 import Shipping from "./pages/shippingAndPaymentPage/ShippingAndPaymentPage";
 import ProductPage from "./pages/productPage/ProductPage";
 import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
+import MapBinding from "./pages/mapBindingPage/MapBindingPage";
 
 function App() {
     return (
         <div className='app'>
             <Header />
             <Routes>
-                <Route path='/' element={<MainPage />} />
-                <Route path='/:name' element={<ProductPage />} />
+                <Route index element={<MainPage />} />
                 <Route path='/bestsellers' element={<BestsellersPage />} />
                 <Route path='/shipping' element={<Shipping />} />
+                <Route path='/binding' element={<MapBinding />} />
                 <Route path='/login' element={<RegisterComponent />} />
                 <Route path='/:category/:name' element={<ProductPage />} />
-                <Route path='/favourite' element={<FavoritesPage />} />
+                <Route path='/:category' element={<FavoritesPage />} />
+                <Route path='/binding' element={<MapBinding />} />
             </Routes>
             <Footer />
         </div>
