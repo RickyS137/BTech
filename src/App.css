@@ -35,3 +35,8 @@ li {
 form {
     user-select: none;
 }
+@media screen and (max-width: 1130px){
+    .container {
+        padding: 0 12px;
+    }
+}

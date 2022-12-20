@@ -1,23 +1,37 @@
 import React from 'react';
 import style from './css/productContainer.module.css'
 import '../../App.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
 
-const ProductContainer = ({products}) => {
+const ProductContainer = ({product}) => {
   const [like, setLike] = useState(false)
   
   const onLike = () => {
-    setLike(!like)
-  }
+    setLike(!like);
+  };
+  console.log({...product});
 
-  return (
+  useEffect(() => {
+    const basket = JSON.parse(localStorage.getItem("basket")) ? JSON.parse(localStorage.getItem("basket")) : localStorage.setItem("basket", '[]');
+    console.log(typeof(basket));
+    if(basket.length > 0){
+      if (like) {
+        for(let i in basket){
+          
+        }
+      }
+    }
+
+
+  }, [like]);
+  return ( 
     <div className={style.box}>
       <div>
-        <img src={products.image} alt="productImg"/>
+        <img src={product.image} alt="productImg"/>
       </div>
       <div className={style.centralBox}>
-        <h3>{products.name}</h3>
+        <h3>{product.name}</h3>
         <p><span>Процессор </span> 8-Core Qualcomm Snapdragon 678</p>
         <p><span>Основная камера </span> 48 MP + 8 MP + 2 MP + 2 MP</p>
         <p><span>Фронтальная камера </span> 13 MP</p>
@@ -25,7 +39,7 @@ const ProductContainer = ({products}) => {
         <p><span>Оперативная память </span> 6Гб</p>
       </div>
       <div className={style.rightBox}>
-        <h3>{products.price} сом</h3>
+        <h3>{product.price} сом</h3>
         <button className='btn'>В корзину</button>
         <p>
           {like ? <Favorite sx={{fill: '#FF6BC9'}} onClick={onLike}/> : <FavoriteBorder sx={{fill: '#A4A2AF'}} onClick={onLike}/>}
