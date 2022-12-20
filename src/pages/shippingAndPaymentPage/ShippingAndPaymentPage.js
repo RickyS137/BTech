@@ -34,12 +34,16 @@ const Shipping = () => {
                         <div>
                             <h3 className={classes.blockH3}>Способ доставки</h3>
                             <form className={classes.blockInputs}>
-                                <input type='radio' name='age' />
-                                <p className={classes.blockP}>Самовывоз</p>
-                                <input type='radio' name='age' />
-                                <p className={classes.blockP}>
-                                    Доставка курьером
-                                </p>
+                                <label>
+                                    <input type='radio' name='age' />
+                                    <p className={classes.blockP}>Самовывоз</p>
+                                </label>
+                                <label>
+                                    <input type='radio' name='age' />
+                                    <p className={classes.blockP}>
+                                        Доставка курьером
+                                    </p>
+                                </label>
                             </form>
                             <form className={classes.forma}>
                                 <h3 className={classes.blockH3}>
