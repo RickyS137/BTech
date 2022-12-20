@@ -16,14 +16,13 @@ function App() {
         <div className='app'>
             <Header />
             <Routes>
-                <Route index element={<MainPage />} />
+                <Route path="/" element={<MainPage />} />
                 <Route path='/bestsellers' element={<BestsellersPage />} />
                 <Route path='/shipping' element={<Shipping />} />
                 <Route path='/binding' element={<MapBinding />} />
                 <Route path='/login' element={<RegisterComponent />} />
-                <Route path='/:category/:name' element={<ProductPage />} />
+                <Route path='/:category/:name' element={<ProductPage />} />kk
                 <Route path='/:category' element={<FavoritesPage />} />
-                <Route path='/binding' element={<MapBinding />} />
             </Routes>
             <Footer />
         </div>

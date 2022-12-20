@@ -51,7 +51,12 @@ const MapBinding = () => {
             <h2>Отлично!</h2>
             <p>Карта успешно привязана.</p>
             <Link to={"/shipping"}>
-                <button className='btn' onClick={()=>localStorage.setItem("credit", true)}>Продолжить</button>
+                <button
+                    className='btn'
+                    onClick={() => localStorage.setItem("credit", true)}
+                >
+                    Продолжить
+                </button>
             </Link>
         </div>,
         <div className={classes.modal2}>

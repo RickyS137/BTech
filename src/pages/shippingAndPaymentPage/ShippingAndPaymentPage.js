@@ -15,7 +15,7 @@ import smile from "../../media/2341821 1.svg";
 import close from "../../media/Cross.svg";
 import { useState } from "react";
 import classes1 from "../mapBindingPage/mapBinding.module.css";
-
+import ActiveLastBreadcrumb from "../../components/breadCrumbs/breadCrumbs";
 const Shipping = () => {
     const binded = JSON.parse(localStorage.getItem("credit"));
     const [modal, setModal] = useState(false);
@@ -24,15 +24,19 @@ const Shipping = () => {
     return (
         <div className={classes.shipping}>
             <div className='container'>
-                <div className={classes.blockInput}>
+                <ActiveLastBreadcrumb />
+                <div
+                    className={classes.blockInput}
+                    style={{ marginTop: "22px" }}
+                >
                     <div>
                         <h2 className={classes.blockH2}>Доставка и оплата</h2>
                         <div>
                             <h3 className={classes.blockH3}>Способ доставки</h3>
                             <form className={classes.blockInputs}>
-                                <input type='radio' name='age' value='10' />
+                                <input type='radio' name='age' />
                                 <p className={classes.blockP}>Самовывоз</p>
-                                <input type='radio' name='age' value='20' />
+                                <input type='radio' name='age' />
                                 <p className={classes.blockP}>
                                     Доставка курьером
                                 </p>
@@ -62,6 +66,7 @@ const Shipping = () => {
                                 <div className={classes.formaDiv}>
                                     <label>Контактный телефон*</label>
                                     <input
+                                        autoComplete='tel'
                                         type='tel'
                                         placeholder='+996'
                                         className={classes.formaInput}
@@ -78,6 +83,7 @@ const Shipping = () => {
                                 <div className={classes.formaDiv}>
                                     <label>Адрес доставки</label>
                                     <input
+                                        autoComplete='address'
                                         type='email'
                                         placeholder='Улица, номер дома, номер квартиры'
                                         className={classes.formaInputs}
@@ -157,11 +163,9 @@ const Shipping = () => {
                                 <img src={smile} alt='' />
                                 <h2>Отлично!</h2>
                                 <p>
-                                    {
-                                        credit === "Наличными" 
-                                            ? "Ваш заказ принят. Ожидайте курьера"
-                                            : "Оплата прошла успешно!"
-                                    }
+                                    {credit === "Наличными"
+                                        ? "Ваш заказ принят. Ожидайте курьера"
+                                        : "Оплата прошла успешно!"}
                                 </p>
                                 <Link to={"/"}>
                                     <button className='btn'>Продолжить</button>

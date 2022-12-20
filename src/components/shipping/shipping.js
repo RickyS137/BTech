@@ -5,7 +5,7 @@ import { getCredit } from "../../redux/slice/creditSlice";
 
 const ShippingCard = ({ props }) => {
     const dispatch = useDispatch();
-    const credit = useSelector(state => state.credit.credit);
+    const credit = useSelector((state) => state.credit.credit);
 
     const activeBorder = () => {
         dispatch(getCredit(props.title));
@@ -16,7 +16,7 @@ const ShippingCard = ({ props }) => {
             style={
                 credit === props.title
                     ? { border: "2px solid #62A9FC" }
-                    : { border: "2px solid transparent"}
+                    : { border: "2px solid transparent" }
             }
             className={classes.oplata}
         >

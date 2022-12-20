@@ -9,6 +9,7 @@ import {
 import '../../App.css';
 import {CircularProgress, Pagination} from '@mui/material';
 import style from './css/bestsellerspage.module.css';
+import ActiveLastBreadcrumb from '../../components/breadCrumbs/breadCrumbs';
 
 const BestsellersPage = () => {
   const products = useSelector(ProductsSelect);
@@ -24,6 +25,7 @@ const BestsellersPage = () => {
   return (
     <div className={style.box}>
       <div className="container">
+        <ActiveLastBreadcrumb/>
         <h2>Хиты продаж</h2>
         <ul className={style.products}>
           {load

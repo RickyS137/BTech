@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductContainer from '../../components/productContainer/productContainer';
 import { useEffect } from 'react';
 import { CircularProgress, Pagination } from '@mui/material';
+import ActiveLastBreadcrumb from '../../components/breadCrumbs/breadCrumbs';
 
 
 const FavoritesPage = () => {
@@ -24,6 +25,7 @@ const FavoritesPage = () => {
   return (
     <div className={style.box}>
       <div className='container'>
+        <ActiveLastBreadcrumb/>
         <div className={style.boxInner}>
           <div className={style.leftBox}>
             <h2>Смартфоны</h2> 
