@@ -10,17 +10,17 @@ import { CircularProgress, Pagination } from '@mui/material';
 import ActiveLastBreadcrumb from '../../components/breadCrumbs/breadCrumbs';
 
 
-const FavoritesPage = () => {
-  const products = useSelector(ProductsSelect)
-  const dispatch = useDispatch()
-  const load = useSelector(LoadSelect)
+const CategoriesPage = () => {
+  const products = useSelector(ProductsSelect);
+  const dispatch = useDispatch();
+  const load = useSelector(LoadSelect);
   
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
 
   
   useEffect(() => {
-    dispatch(getProducts())
-  },[])
+    dispatch(getProducts());
+  },[dispatch]);
 
   return (
     <div className={style.box}>
@@ -38,7 +38,7 @@ const FavoritesPage = () => {
             {
               load
               ? <CircularProgress/>
-              : products.slice(page * 5 - 5, page * 5).map((item, i) => <li key={i}><ProductContainer products={item}/></li>)
+              : products.slice(page * 5 - 5, page * 5).map((item, i) => <li key={i}><ProductContainer product={item}/></li>)
             }
           </ul>
         </div>
@@ -55,4 +55,4 @@ const FavoritesPage = () => {
   );
 }
 
-export default FavoritesPage;
+export default CategoriesPage;
