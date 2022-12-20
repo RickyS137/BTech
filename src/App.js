@@ -22,12 +22,9 @@ function App() {
                 <Route path='/binding' element={<MapBinding />} />
                 <Route path='/login' element={<RegisterComponent />} />
                 <Route path='/:category/:name' element={<ProductPage />} />
-<<<<<<< HEAD
                 <Route path='/:category' element={<FavoritesPage />} />
-=======
                 <Route path='/:category' element={<CategoriesPage />} />
                 <Route path='/binding' element={<MapBinding />} />
->>>>>>> aa87cf06ec6a4c34a1d3f9d1c10a7296b5d654d3
             </Routes>
             <Footer />
         </div>
