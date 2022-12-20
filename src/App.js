@@ -16,7 +16,7 @@ function App() {
         <div className='app'>
             <Header />
             <Routes>
-                <Route index element={<MainPage />} />
+                <Route path="/" element={<MainPage />} />
                 <Route path='/bestsellers' element={<BestsellersPage />} />
                 <Route path='/shipping' element={<Shipping />} />
                 <Route path='/binding' element={<MapBinding />} />
