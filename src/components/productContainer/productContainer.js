@@ -7,19 +7,31 @@ import { Favorite, FavoriteBorder } from '@mui/icons-material';
 const ProductContainer = ({product}) => {
   const [like, setLike] = useState(false)
   
+  const p = (item) => {
+    return JSON.parse(item)
+  }
+  const s = (item) => {
+    return JSON.stringify(item)
+  }
   const onLike = () => {
     setLike(!like);
   };
-
+  
   useEffect(() => {
     let basket = localStorage.getItem('basket');
-    basket === null && localStorage.setItem('basket', JSON.stringify([]));
+    basket === null && localStorage.setItem('basket', s([]));
     
+    for (let i in p(basket)){
+      p(basket)[i].name === product.name && setLike(true)
+    }
+
     setTimeout(()=>{
       like 
-      ? JSON.parse(basket).filter(e => e.name === product.name).length === 0 &&  localStorage.setItem('basket', JSON.stringify([...JSON.parse(basket), product])) 
-      : localStorage.setItem("basket", JSON.stringify(JSON.parse(basket).filter(e => e.name !== product.name)));
+      ? p(basket).filter(e => e.name === product.name).length === 0 && localStorage.setItem('basket', s([p(basket), product])) 
+      : localStorage.setItem("basket", s(p(basket).filter(e => e.name !== product.name)));
     },100)
+
+    
 
   }, [like]);
   return ( 
