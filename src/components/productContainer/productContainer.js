@@ -10,19 +10,16 @@ const ProductContainer = ({product}) => {
   const onLike = () => {
     setLike(!like);
   };
-  console.log({...product});
 
   useEffect(() => {
-    const basket = JSON.parse(localStorage.getItem("basket")) ? JSON.parse(localStorage.getItem("basket")) : localStorage.setItem("basket", '[]');
-    console.log(typeof(basket));
-    if(basket.length > 0){
-      if (like) {
-        for(let i in basket){
-          
-        }
-      }
-    }
-
+    let basket = localStorage.getItem('basket');
+    basket === null && localStorage.setItem('basket', JSON.stringify([]));
+    
+    setTimeout(()=>{
+      like 
+      ? JSON.parse(basket).filter(e => e.name === product.name).length === 0 &&  localStorage.setItem('basket', JSON.stringify([...JSON.parse(basket), product])) 
+      : localStorage.setItem("basket", JSON.stringify(JSON.parse(basket).filter(e => e.name !== product.name)));
+    },100)
 
   }, [like]);
   return ( 
