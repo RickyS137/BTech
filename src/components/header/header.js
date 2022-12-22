@@ -16,10 +16,14 @@ import {
     ShoppingBagOutlined,
     PlayArrow,
 } from "@mui/icons-material";
-import { Badge, Box, Modal } from "@mui/material";
+import { Alert, Badge, Box, Modal } from "@mui/material";
+
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
 
 import MyModal from "./modal";
 import axios from "axios";
+import { useClipboard } from "use-clipboard-copy";
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -32,6 +36,31 @@ const Header = () => {
     const [openModal, setOpenModal] = useState(false);
     const [openLocate, setOpenLocate] = useState(false);
     const [search, setSearch] = useState([]);
+
+    const [state, setState] = React.useState({
+        open: false,
+        vertical: "top",
+        horizontal: "center",
+    });
+
+    const { vertical, horizontal, open } = state;
+
+    const handleClickCopy = (newState) => {
+        setState({ open: true, ...newState });
+        setTimeout(handleClose, 1500);
+    };
+
+    const handleCopy = ({target}) => {
+        navigator.clipboard.writeText(target.textContent);
+        handleClickCopy({
+            vertical: "top",
+            horizontal: "right",
+        });
+    };
+
+    const handleClose = () => {
+        setState({ ...state, open: false });
+    };
 
     const handleClick = (e) => {
         e.target.tagName !== "UL" &&
@@ -181,16 +210,26 @@ const Header = () => {
                         <span>
                             <Link to='/'>Рассрочка</Link>
                         </span>
-                        <span
-                            onClick={(e) => {
-                                navigator.clipboard.writeText(
-                                    e.target.textContent
-                                );
-                                alert("Номер скоппирован!");
-                            }}
+                        <Button
+                            onClick={handleCopy}
+                            sx={{ color: "white", border: "none" }}     
                         >
                             +996 550 00 55 00
-                        </span>
+                        </Button>
+                        <Snackbar
+                            autoHideDuration={6000}
+                            anchorOrigin={{ vertical, horizontal }}
+                            open={open}
+                            key={vertical + horizontal}
+                        >
+                            <Alert
+                                onClose={handleClose}
+                                severity='success'
+                                sx={{ width: "100%" }}
+                            >
+                                This is a success message!
+                            </Alert>
+                        </Snackbar>
                     </div>
                 </div>
             </div>

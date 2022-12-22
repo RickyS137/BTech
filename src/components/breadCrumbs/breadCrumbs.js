@@ -1,7 +1,6 @@
 import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link, useLocation } from "react-router-dom";
-import { render } from "@testing-library/react";
 
 export default function ActiveLastBreadcrumb() {
     const location = useLocation();
@@ -40,18 +39,6 @@ export default function ActiveLastBreadcrumb() {
             <Link style={{ textDecoration: "none", color: "#605D74" }} to={"/"}>
                 Главная
             </Link>
-            <Link
-                style={{ textDecoration: "none", color: "#605D74" }}
-                to={"/:category"}
-            >
-                Смартфоны
-            </Link>
-            <Link
-                style={{ textDecoration: "none", color: "#605D74" }}
-                to={"/:category/:name"}
-            >
-                Samsung A50
-            </Link>
             <p style={{ color: "black" }}>Корзина</p>
         </Breadcrumbs>,
     ];
@@ -65,5 +52,7 @@ export default function ActiveLastBreadcrumb() {
         return breads[4];
     } else if (location.pathname === "/favourite") {
         return breads[3];
+    } else if (location.pathname === "/:name") {
+        return breads[1];
     }
 }
