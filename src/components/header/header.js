@@ -50,7 +50,7 @@ const Header = () => {
         setTimeout(handleClose, 1500);
     };
 
-    const handleCopy = ({target}) => {
+    const handleCopy = ({ target }) => {
         navigator.clipboard.writeText(target.textContent);
         handleClickCopy({
             vertical: "top",
@@ -212,7 +212,7 @@ const Header = () => {
                         </span>
                         <Button
                             onClick={handleCopy}
-                            sx={{ color: "white", border: "none" }}     
+                            sx={{ color: "white", border: "none" }}
                         >
                             +996 550 00 55 00
                         </Button>
