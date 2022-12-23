@@ -53,7 +53,7 @@ export default function ActiveLastBreadcrumb() {
         return breads[4];
     } else if (location.pathname === "/favourite") {
         return breads[3];
-    } else if (location.pathname === "/:name") {
+    } else if (params.name) {
         return breads[1];
     }
 }

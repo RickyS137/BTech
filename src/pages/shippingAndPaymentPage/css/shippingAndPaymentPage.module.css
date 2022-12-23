@@ -6,10 +6,16 @@
     display: flex;
     justify-content: space-between;
 }
-
-.blockInputs label{
+/* @media (max-width: 1400px) {
+    .blockInput {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+} */
+.blockInputs label {
     display: flex;
 }
+
 .blockInputs {
     display: flex;
 }
@@ -91,7 +97,7 @@
 .products {
     height: 233px;
     overflow-y: scroll;
-    
+
 }
 
 .oplata {
@@ -171,3 +177,4 @@
     align-items: center;
     justify-content: center;
 }
+
