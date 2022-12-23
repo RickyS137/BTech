@@ -1,6 +1,7 @@
 .mapBindingBlock {
     margin: 130px 0 60px 0;
 }
+
 .mapBinding {
     margin: 0 auto;
     display: flex;
@@ -8,11 +9,13 @@
     height: 400px;
     position: relative;
 }
+
 .bindingH2 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 50px;
 }
+
 .mapCard {
     width: 600px;
     height: 320px;
@@ -24,11 +27,13 @@
     border-radius: 16px;
     z-index: 1;
 }
+
 .mapCard img {
     margin-top: 35px;
     margin-left: 44px;
     margin-bottom: 35px;
 }
+
 .mapCard2 {
     width: 600px;
     height: 320px;
@@ -38,6 +43,7 @@
     background-color: #2e3c85;
     border-radius: 16px;
 }
+
 .bindingForm {
     display: flex;
     width: 500px;
@@ -49,6 +55,7 @@
     justify-content: space-between;
     border-radius: 12px;
 }
+
 .bindingForm input {
     width: 85px;
     height: 38px;
@@ -58,21 +65,24 @@
     font-size: 25px;
     letter-spacing: 6px;
 }
+
 .bindingForm1 {
     margin-left: 50px;
     display: flex;
     margin-top: 30px;
     width: 220px;
     height: 62px;
-    column-gap: 40px;
+    column-gap: 20px;
     justify-content: space-between;
     border-radius: 12px;
     align-items: center;
 }
+
 .bindingForm1 p {
     font-size: 28px;
     color: white;
 }
+
 .bindingForm1 input {
     width: 103px;
     height: 72px;
@@ -84,6 +94,7 @@
     border-radius: 12px;
     padding-left: 34px;
 }
+
 .bindingForm1 input::-webkit-outer-spin-button,
 .bindingForm input::-webkit-outer-spin-button,
 .bindingForm1 input::-webkit-inner-spin-button,
@@ -92,6 +103,7 @@
     -webkit-appearance: none;
     margin: 0;
 }
+
 .bindingForm1 input::placeholder,
 .bindingForm input::placeholder,
 .card2Input input::placeholder {
@@ -102,17 +114,20 @@
     line-height: 0%;
     transform: translateY(7px);
 }
+
 .mapCard2 div {
     width: 100%;
     height: 72px;
     background-color: black;
     margin-top: 96px;
 }
+
 .card2Input {
     width: 111px;
     height: 72px;
     border-radius: 12px;
 }
+
 .card2Input input {
     position: absolute;
     bottom: 30px;
@@ -127,14 +142,17 @@
     border-radius: 12px;
     padding-left: 34px;
 }
+
 #but {
     margin-top: 60px;
 }
+
 .butDiv {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .modal1 {
     width: 320px;
     height: 380px;
@@ -145,17 +163,19 @@
     border: none;
     background-color: #8EDE4D;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .modal1 p,
 .modal2 p {
     text-align: center;
     width: 208px;
 }
+
 .modal2 {
     width: 320px;
     height: 380px;
@@ -166,39 +186,372 @@
     border: none;
     background-color: #FF9191;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .modal1 img {
     margin-top: 20px;
 }
+
 .modal2 img {
     margin-top: 20px;
 }
+
 .modal1 h2 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: -35px;
 }
+
 .modal1 p {
     font-size: 16px;
     font-weight: 400;
 }
+
 .modal2 h2 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: -35px;
 }
+
 .modal2 p {
     font-size: 16px;
     font-weight: 400;
 }
+
 .modalImgClose {
     position: absolute;
     top: -5px;
     right: 15px;
     cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .mapBinding {
+        margin: 0 auto;
+        display: flex;
+        width: 620px;
+        height: 380px;
+        position: relative;
+    }
+
+    .mapCard {
+        width: 500px;
+        height: 280px;
+    }
+
+    .mapCard2 {
+        width: 500px;
+        height: 280px;
+    }
+
+    .bindingForm {
+        width: 400px;
+        height: 62px;
+    }
+
+    .bindingForm input {
+        width: 75px;
+        height: 30px;
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .bindingForm1 {
+        width: 200px;
+        height: 52px;
+    }
+
+    .bindingForm1 input {
+        width: 80px;
+        height: 62px;
+        padding-left: 24px;
+        font-size: 20px;
+    }
+
+    .mapCard2 div {
+        height: 62px;
+        margin-top: 80px;
+    }
+
+    .card2Input {
+        width: 90px;
+        height: 62px;
+    }
+
+    .card2Input input {
+        bottom: 30px;
+        right: 52px;
+        width: 90px;
+        height: 62px;
+        padding-left: 24px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 820px) {
+    .mapBinding {
+        margin: 0 auto;
+        width: 470px;
+        height: 250px;
+    }
+
+    .mapCard {
+        width: 360px;
+        height: 200px;
+    }
+
+    .mapCard2 {
+        width: 360px;
+        height: 200px;
+    }
+
+    .bindingForm {
+        width: 300px;
+        height: 42px;
+        padding-left: 24px;
+    }
+
+    .bindingForm input {
+        width: 55px;
+        height: 40px;
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .bindingForm1 {
+        width: 100px;
+        height: 42px;
+        margin-left: 40px;
+        margin-top: 15px;
+    }
+
+    .bindingForm1 input {
+        width: 70px;
+        height: 40px;
+        padding-left: 24px;
+        font-size: 16px;
+    }
+
+    .mapCard2 div {
+        height: 42px;
+        margin-top: 50px;
+    }
+
+    .card2Input {
+        width: 80px;
+        height: 52px;
+        margin-top: 20px;
+    }
+
+    .card2Input input {
+        bottom: 20px;
+        right: 32px;
+        width: 70px;
+        height: 40px;
+        padding-left: 18px;
+        font-size: 16px;
+    }
+
+    .mapCard img {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 65px;
+    }
+
+    .bindingForm1 input::placeholder,
+    .bindingForm input::placeholder,
+    .card2Input input::placeholder {
+        color: black;
+        font-weight: 400;
+        font-size: 22px;
+        letter-spacing: 3px;
+        line-height: 0%;
+        transform: translateY(5px);
+    }
+}
+
+@media (max-width: 520px) {
+    .mapBinding {
+        width: 380px;
+        height: 260px;
+    }
+
+    .card2Input input {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .mapBinding {
+        width: 360px;
+        height: 220px;
+    }
+
+    .card2Input input {
+        bottom: 10px;
+    }
+
+    .mapCard {
+        width: 320px;
+        height: 160px;
+    }
+
+    .mapCard2 {
+        width: 320px;
+        height: 160px;
+    }
+
+    .bindingForm {
+        width: 260px;
+        height: 32px;
+        padding: 0 50px 0 20px;
+    }
+
+    .bindingForm input {
+        width: 45px;
+        height: 32px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .bindingForm1 input::placeholder,
+    .bindingForm input::placeholder,
+    .card2Input input::placeholder {
+        color: black;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 0%;
+        transform: translateY(7px);
+    }
+
+    .bindingForm1 {
+        width: 80px;
+        height: 32px;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+
+    .bindingForm1 input {
+        width: 45px;
+        height: 32px;
+        padding-left: 14px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .mapCard img {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 45px;
+        margin-left: 30px;
+    }
+
+    .card2Input {
+        width: 50px;
+        height: 32px;
+        margin-top: 20px;
+    }
+
+    .card2Input input {
+        bottom: 20px;
+        right: 32px;
+        width: 50px;
+        height: 32px;
+        padding-left: 12px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 380px) {
+    .mapBinding {
+        width: 260px;
+        height: 155px;
+    }
+
+    .mapCard {
+        width: 230px;
+        height: 120px;
+    }
+
+    .mapCard2 {
+        width: 230px;
+        height: 120px;
+    }
+
+    .bindingForm {
+        width: 200px;
+        height: 22px;
+        padding: 0 25px 0 20px;
+        border-radius: 8px;
+    }
+
+    .bindingForm input {
+        width: 32px;
+        height: 22px;
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .bindingForm1 input::placeholder,
+    .bindingForm input::placeholder,
+    .card2Input input::placeholder {
+        color: black;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 0%;
+        transform: translateY(4px);
+    }
+
+    .bindingForm1 {
+        width: 70px;
+        height: 22px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .bindingForm1 input {
+        width: 35px;
+        height: 22px;
+        padding-left: 11px;
+        font-size: 8px;
+        letter-spacing: 3px;
+        border-radius: 8px;
+    }
+
+    .mapCard img {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        width: 35px;
+        margin-left: 15px;
+    }
+
+    .card2Input {
+        width: 40px;
+        height: 22px;
+        margin-top: 20px;
+    }
+
+    .card2Input input {
+        bottom: 8px;
+        right: 32px;
+        width: 40px;
+        height: 22px;
+        padding-left: 11px;
+        font-size: 8px;
+        letter-spacing: 3px;
+        border-radius: 8px;
+    }
+
+    .mapCard2 div {
+        height: 18px;
+        margin-top: 25px;
+    }
 }
