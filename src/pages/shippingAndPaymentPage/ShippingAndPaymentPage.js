@@ -22,7 +22,7 @@ const Shipping = () => {
     const [modal, setModal] = useState(false);
     const credit = useSelector((state) => state.credit.credit);
     const [update, setUpdate] = useState(false)
-    
+    const [sum, setSum] = useState(0)
     const [busket, setBusket] = useState([])
 
     const handleDelete = (product) => {
@@ -33,6 +33,10 @@ const Shipping = () => {
     useEffect(()=>{
         setBusket(JSON.parse(localStorage.getItem('busket')))
     },[update])
+    
+    setTimeout(() => {
+        console.log(busket.length);
+    },100)
     
     return (
         <div className={classes.shipping}>
@@ -119,8 +123,11 @@ const Shipping = () => {
                         }
                         </div>
                         <hr style={{border: '0.5px solid #D2D1D7', marginTop: '30px'}}/>
-                        <div>
-
+                        <div className={classes.price}>
+                            <h3>Итого:</h3>
+                            <p>
+                                {sum}
+                            </p>
                         </div>
                     </div>
                 </div>

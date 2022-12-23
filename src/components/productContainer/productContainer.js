@@ -3,6 +3,7 @@ import style from './css/productContainer.module.css'
 import '../../App.css'
 import { useState, useEffect } from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 
 const ProductContainer = ({product, liked = true, inBusket = true, handleRemove}) => {
   const [like, setLike] = useState(false)
@@ -64,10 +65,12 @@ const ProductContainer = ({product, liked = true, inBusket = true, handleRemove}
   return ( 
     <div className={style.box}>
       <div>
-        <img src={product.image} alt="productImg"/>
+        <NavLink to={`/category/${product.name}`}>
+          <img src={product.image} alt="productImg"/>
+        </NavLink>
       </div>
       <div className={style.centralBox}>
-        <h3>{product.name}</h3>
+        <NavLink style={{textDecoration: 'none', color: '#0B1124'}} to={`/category/${product.name}`}><h3>{product.name}</h3></NavLink>
         <p><span>Процессор </span> 8-Core Qualcomm Snapdragon 678</p>
         <p><span>Основная камера </span> 48 MP + 8 MP + 2 MP + 2 MP</p>
         <p><span>Фронтальная камера </span> 13 MP</p>

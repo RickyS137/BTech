@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import style from './css/BusketCard.module.css'
 
 const BusketCard = ({product, handleDelete}) => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
   const inc = () => {
     setCounter(counter + 1)
   }
   const dec = () => {
     setCounter(counter - 1)
+    counter <= 1 && setCounter(1)
   }
   
   return (
