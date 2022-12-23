@@ -1,9 +1,10 @@
 import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 export default function ActiveLastBreadcrumb() {
     const location = useLocation();
+    const params = useParams();
     const breads = [
         <Breadcrumbs aria-label='breadcrumb'>
             <Link style={{ textDecoration: "none", color: "#605D74" }} to={"/"}>
@@ -42,7 +43,7 @@ export default function ActiveLastBreadcrumb() {
             <p style={{ color: "black" }}>Корзина</p>
         </Breadcrumbs>,
     ];
-    if (location.pathname === "/:category") {
+    if (params.category) {
         return breads[0];
     } else if (location.pathname === "/:category/:name") {
         return breads[1];
