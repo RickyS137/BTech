@@ -1,0 +1,42 @@
+.block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 225px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    width: 100%;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+.left p {
+    width: 393px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 37px;
+}
+.right {
+    background: no-repeat center center;
+    background-size: contain;
+    width: 486px;
+    height: 411px;
+}
+.right img {
+    width: 100%;
+    height: 100%;
+}
