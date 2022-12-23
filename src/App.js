@@ -8,8 +8,9 @@ import MainPage from "./pages/mainPage/MainPage";
 import BestsellersPage from "./pages/bestsellersPage/BestsellersPage";
 import Shipping from "./pages/shippingAndPaymentPage/ShippingAndPaymentPage";
 import ProductPage from "./pages/productPage/ProductPage";
-import CategoriesPage from "./pages/favoritesPage/CategoriesPage";
+import CategoriesPage from "./pages/categoriesPage/CategoriesPage";
 import MapBinding from "./pages/mapBindingPage/MapBindingPage";
+import FavouritesPage from "./pages/favouritesPage/FavouritesPage";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/:category/:name' element={<ProductPage />} />
                 <Route path='/:category' element={<CategoriesPage />} />
                 <Route path='/binding' element={<MapBinding />} />
+                <Route path="/favourites" element={<FavouritesPage/>}/>
             </Routes>
             <Footer />
         </div>
