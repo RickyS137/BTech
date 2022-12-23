@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./css/header.css";
 import classes from "./css/header.module.css";
@@ -32,6 +32,7 @@ const Header = () => {
     const [openModal, setOpenModal] = useState(false);
     const [openLocate, setOpenLocate] = useState(false);
     const [search, setSearch] = useState([]);
+    const [busketCount, setBusketCount] = useState(0) 
 
     const handleClick = (e) => {
         e.target.tagName !== "UL" &&
@@ -85,6 +86,8 @@ const Header = () => {
     };
     useEffect(() => {
         dispatch(newLocate(JSON.parse(localStorage.getItem("locate"))));
+        const busket = localStorage.getItem('busket')
+        busket !== null && setBusketCount(JSON.parse(busket).length)
     }, []);
     return (
         <header className={classes.btech_navbar}>
@@ -238,7 +241,7 @@ const Header = () => {
                         <div className={classes.filter}>
                             <ul onClick={selectSearch}>
                                 {search.map((s, key) => (
-                                    <li key={key}>{s.name}</li>
+                                    <li key={key}><NavLink to={`/smartphones/${s.name}/`}>{s.name}</NavLink></li>
                                 ))}
                             </ul>
                         </div>
@@ -263,14 +266,14 @@ const Header = () => {
                                 </div>
                             </Box>
                         </Modal>
-                        <Link className={classes.link} to='/favourite'>
+                        <Link className={classes.link} to='/favourites'>
                             <FavoriteBorderOutlined
                                 style={{ marginRight: "8px" }}
                             />
                             <span>Избранное</span>
                         </Link>
                         <Link className={classes.link} to='/shipping'>
-                            <Badge badgeContent={1} color='error'>
+                            <Badge badgeContent={busketCount} color='error'>
                                 <ShoppingBagOutlined
                                     sx={{ color: "#0B1124" }}
                                 />

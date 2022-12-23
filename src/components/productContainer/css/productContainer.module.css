@@ -53,8 +53,6 @@
   color: #605d74;
   cursor: pointer;
   -webkit-user-select: none;
-}
-.rightBox p {
   display: flex;
   align-items: center;
   gap: 9px;

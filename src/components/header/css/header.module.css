@@ -155,6 +155,10 @@
     list-style: none;
     padding: 20px;
 }
+.filter li a{
+    text-decoration: none;
+    color: #000;
+}
 .filter::backdrop {
     background: #000;
 }
