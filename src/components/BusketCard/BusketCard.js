@@ -8,7 +8,7 @@ const BusketCard = ({product, handleDelete}) => {
   }
   const dec = () => {
     setCounter(counter - 1)
-    counter <= 1 && setCounter(1)
+    // counter <= 1 && setCounter(1)
   }
   
   return (
@@ -28,7 +28,7 @@ const BusketCard = ({product, handleDelete}) => {
       <div className={style.prices}>
         <b>{product.price} сомов</b>
         <div className={style.buttons}>
-          <button onClick={dec}>-</button>
+          <button onClick={dec} disabled={counter === 1}>-</button>
           <span>{counter}</span>
           <button onClick={inc}>+</button>
         </div>

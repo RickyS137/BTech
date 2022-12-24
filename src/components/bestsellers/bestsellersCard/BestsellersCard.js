@@ -1,14 +1,31 @@
 import { FavoriteBorder , Favorite } from '@mui/icons-material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './css/bestsellersCard.module.css'
 
-const BestsellersCard = ({item}) => {
+const BestsellersCard = ({item, liked = true}) => {
   const [like, setLike] = useState(false)
   
   const onLike = () => {
     setLike(!like)
   }
+
+  useEffect(() => {
+    let favourites = localStorage.getItem('favourites');
+
+    liked && setTimeout(()=>{
+      like
+        ? JSON.parse(favourites).filter(e => e.name === item.name).length === 0 && localStorage.setItem('favourites', JSON.stringify([...JSON.parse(favourites), item])) 
+        : localStorage.setItem("favourites", JSON.stringify(JSON.parse(favourites).filter(e => e.name !== item.name)));
+    },100) 
+  }, [like]);
+
+  useEffect(()=>{
+    let favourites = localStorage.getItem('favourites');
+    
+    favourites === null && localStorage.setItem('favourites', JSON.stringify([]));
+    setLike(JSON.parse(favourites).filter(e => e.name === item.name).length > 0);
+  },[item])
 
   return (
     <div className={style.box}>

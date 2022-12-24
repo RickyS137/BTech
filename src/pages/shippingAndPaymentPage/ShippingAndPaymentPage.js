@@ -34,9 +34,6 @@ const Shipping = () => {
         setBusket(JSON.parse(localStorage.getItem('busket')))
     },[update])
     
-    setTimeout(() => {
-        console.log(busket.length);
-    },100)
     
     return (
         <div className={classes.shipping}>
