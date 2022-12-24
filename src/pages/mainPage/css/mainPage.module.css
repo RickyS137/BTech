@@ -1,5 +1,42 @@
 .mainPage {
     width: 100%;
-    height: 3484px;
     background: #FEFEFF;
+}
+
+.btnsMainPage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+}
+
+.btnMainPage {
+    width: 288px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #F7F7FC;
+    padding: 18px, 48px, 18px, 48px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+.popularTovars {
+    margin-top: 64px;
+}
+
+.popularTovars h2 {
+    font-weight: 600;
+    font-size: 28px;
+}
+.bestH2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+.bestsellers {
+    margin-top: 50px;
 }
