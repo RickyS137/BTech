@@ -1,0 +1,27 @@
+.slideMini {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    align-items: center;
+    margin-top: 32px;
+    flex-direction: row;
+    gap: 30px;
+    user-select: none;  
+}
+.hh {
+    width: 140px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.hh img {
+    width: 140px;
+    height: 103px;
+}
+.hh h3 {
+    font-size: 16px;
+    font-weight: 400;
+}

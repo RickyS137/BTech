@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
+import './css/slider.css'
 import AliceCarousel from 'react-alice-carousel';
-import './css/slider.css';
 import classes from './css/slider.module.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getProducts, LoadSelect, ProductsSelect} from "../../../redux/slice/productsSlice";
@@ -34,7 +34,7 @@ const Slider = () => {
                         <NavLink to={`/smartphones/${products[6].name}/`}><button className="btn">Посмотреть товар</button></NavLink>
                     </div>
                     <div className={classes.right} style={{backgroundImage: `url("${slide1}")`}}>
-                        <img src={products[6].image} alt=""/>
+                        <img src={products[6].image} alt="#"/>
                     </div>
                 </div> :
                     <CircularProgress/>

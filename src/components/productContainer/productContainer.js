@@ -22,11 +22,6 @@ const ProductContainer = ({product, liked = true, inBusket = true, handleRemove}
     setAdd(!add)
   }
 
-  // const handleremove = () => {
-  //   localStorage.setItem('favourites', s(p(localStorage.getItem('favourites')).filter(e => e.name !== product.name)));
-  //   setUpdate(!update)
-  // };
-
   const handleDelete = () => {
     localStorage.setItem('busket', s(p(localStorage.getItem('busket')).filter(e => e.name !== product.name)));
   }
@@ -57,7 +52,7 @@ const ProductContainer = ({product, liked = true, inBusket = true, handleRemove}
     }
     inBusket && setTimeout(()=>{
       add 
-        ? p(busket).filter(e => e.name === product.name).length === 0 && localStorage.setItem('busket', s([...p(busket), product])) 
+        ? p(busket).filter(e => e.name === product.name).length === 0 && localStorage.setItem('busket', s([...p(busket), {...product, count: 1}])) 
         : localStorage.setItem("busket", s(p(busket).filter(e => e.name !== product.name)));
     },100) 
   }, [add]);

@@ -1,3 +1,9 @@
 .box{
   margin-top: 122px;
 }
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}

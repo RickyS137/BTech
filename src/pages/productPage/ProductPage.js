@@ -6,16 +6,36 @@ import { getProduct, ProductSelect } from "../../redux/slice/productSlice";
 import { ArrowForward } from "@mui/icons-material";
 import ActiveLastBreadcrumb from "../../components/breadCrumbs/breadCrumbs";
 
-const ProductPage = () => {
+const ProductPage = (inBusket = true) => {
     const [info, setInfo] = useState({ height: 236 });
     const dispatch = useDispatch();
     const product = useSelector(ProductSelect);
     const params = useParams();
+    const [add, setAdd] = useState(false)
+
+    const onAdd = () => {
+        setAdd(!add)
+    }
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
         dispatch(getProduct(params.name));
     }, []);
+
+    useEffect(() => {
+        let busket = localStorage.getItem('busket');
+        
+        busket === null && localStorage.setItem('busket', JSON.stringify([]));
+        for (let i in JSON.parse(busket)){
+            JSON.parse(busket)[i].name === product.name && setAdd(true);
+        }
+        inBusket && setTimeout(()=>{
+          add 
+            ? JSON.parse(busket).filter(e => e.name === product.name).length === 0 && localStorage.setItem('busket', JSON.stringify([...JSON.parse(busket), {...product, count: 1}])) 
+            : localStorage.setItem("busket", JSON.stringify(JSON.parse(busket).filter(e => e.name !== product.name)));
+        },100) 
+      }, [add]);
+
     return (
         <div className={classes.product + " container"}>
             <ActiveLastBreadcrumb/>
@@ -58,7 +78,7 @@ const ProductPage = () => {
                     <span>
                         Все характеристики <ArrowForward />
                     </span>
-                    <button className='btn'>Добавить в корзину</button>
+                    <button className='btn' onClick={onAdd}>Добавить в корзину</button>
                 </div>
             </div>
             <div className={classes.info}>

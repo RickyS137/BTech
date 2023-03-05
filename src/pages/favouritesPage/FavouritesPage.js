@@ -3,10 +3,12 @@ import ProductContainer from '../../components/productContainer/productContainer
 import style from './css/favouritesPage.module.css'
 import '../../App.css'
 import ActiveLastBreadcrumb from '../../components/breadCrumbs/breadCrumbs';
+import { Pagination } from '@mui/material';
 
 const FavouritesPage = () => {
   const [update, setUpdate] = useState(false)
   const [products, setProducts] = useState([])
+  const [page, setPage] = useState(1)
 
   
   const handleRemove = (product) => {
@@ -22,11 +24,24 @@ const FavouritesPage = () => {
     <div className={style.box}>
       <div className='container'>
         <ActiveLastBreadcrumb/>
-      {products !== null 
-      ?
-      products.length === 0 ? <div style={{height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Здесь пока ничего нет</div> : products.map((item, i) => <li key={i}><ProductContainer product={item} liked={false} handleRemove={handleRemove}/></li>)
-      : <div style={{height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Здесь пока ничего нет</div>
-      }
+      <div>
+          {products !== null 
+          ?
+          products.length === 0 ? <div style={{height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Здесь пока ничего нет</div> : products.slice(page * 5 - 5, page * 5).map((item, i) => <li key={i}><ProductContainer product={item} liked={false} handleRemove={handleRemove}/></li>)
+          : <div style={{height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Здесь пока ничего нет</div>
+          }
+      </div>
+      <div className={style.pagination}>
+          data.filter(item=>item.genre.includes(i,i))
+          {
+          products.length > 0 && <Pagination
+          size='large'
+          color='primary'
+          count={Math.ceil(products.length / 5)}
+          onChange={(_,e) => setPage(e)}
+          />
+          }
+      </div>
       </div>
     </div>
   );
